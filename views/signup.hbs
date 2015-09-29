@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Signup today!</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style>
+    body {
+      background: url(http://photo.foter.com/photos/226/buildings-17.jpg);
+      background-size: cover;
+    }
+    
+    .center-stuff {
+      padding: 50px;
+      border-radius: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center-stuff">
+    <h1>Signup</h1>
+    <p>Welcome to the signup. Hurry up signing and get your bloody free cookie, today!</p>
+    <p style="color: red">{{errors}}</p>
+    <form method="POST">
+      <input type="text" name="username" placeholder="Username" value="{{username}}" required>
+      <br />
+      <input type="password" name="password" placeholder="Bloody password, not '1234'" required>
+      <br />
+      <input type="submit" value="GET YOUR COOKIE NOW!">
+    </form>
+  </div>
+
+</body>
+
+</html>

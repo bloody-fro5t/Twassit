@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+  <html>
+
+<head>
+  <title>Don't login!</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style>
+    body {
+      background: url(https://farm9.staticflickr.com/8290/7858830434_bf3b3db198_c.jpg);
+      background-size: cover;
+    }
+    
+    .center-stuff {
+     
+      padding: 50px;
+      border-radius: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center-stuff">
+    <h1>Just a bloody login page</h1>
+    <h2>Yep, this is the moment you login to a new adventure!</h1>
+    <p>Its your destiny, come on, you can do it, just bloody login. now.</p>
+    <p style="color: red">{{errors}}</p>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Your bloody Username" value="{{username}}"required />
+        <br />
+        <input type="password" name="password" placeholder="and your bloody password" required/>
+        <br />
+        Remember me <input type="checkbox" name="rememberMe" /><br />
+        <input type="submit" value="Just bloody login">
+    </form>
+    <a href="/signup">Wouldn't be hard to login without be signed up?</a>
+</div>
+
+  </body>
+</html>

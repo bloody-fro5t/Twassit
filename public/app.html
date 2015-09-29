@@ -1,0 +1,56 @@
+<html ng-app="TwassitApp">
+
+<head>
+    <title>Twassit</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        html {
+            background: url(/images/ocean.jpg);
+            background-size: cover;
+            color: white;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        textarea {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.5) 0 0 24px 0;
+        }
+        
+        body {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 100px;
+            /*border-radius: 30%;*/
+        }
+    </style>
+</head>
+
+<body ng-controller="ProfileController">
+    hello {{ user }}, <a href="/logout">logout?</a>
+    <br />
+    <button style="border: none" ng-click="reloadFeed()">Reload normal feed</button>
+    <br />
+    <textarea name="bloody" ng-model="rcist" rows="5" cols="100" placeholder="Share all the racism you have been encountered"></textarea>
+    <br /> You got {{ left }} characters left
+    <button style="border: none" ng-click="share()">Share the racism!</button>
+    <br> {{ status }}
+    <hr>
+    <p>Clicking on any username will show only there posts</p>
+    <div ng-repeat="post in posts">
+        <div class="twot">
+            <h2 ng-click="feed(post.username)">{{ post.username }} </h2> posted on {{ post.timestamp }}
+            <br>{{ post.agree.length }} people have agreed |
+            <button ng-click="agree(post._id)">Agree</button>
+            {{ post.disagree.length }} people have disagree |
+            <button ng-click="disagree(post._id)">Disgree</button>
+            <p>{{ post.post }} </p>
+        </div>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px Monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input {
+  margin: 5px 0px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 24px 0;
+  width: 100%;
+}
+
+.center-stuff {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 24px 0;
+}
+
+.twot button {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 24px 0;
+}
